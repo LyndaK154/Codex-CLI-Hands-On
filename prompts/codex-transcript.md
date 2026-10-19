@@ -565,3 +565,119 @@ I reviewed the visualizations and correlation results. Before finalizing my
   causal estimates; extreme values may influence the fitted lines, and the
   analysis does not adjust for other home characteristics.
   Worked for 2m 15s · 11:12 PM
+
+Prompt 7
+I reviewed your verification results and accept the findings.
+  Please update my existing README.md file for my Week 7 Codex CLI assignment.
+  Include the following:
+  1. The analytical question: "How does above-ground living area affect home
+  sale prices in Ames, Iowa, and does the relationship differ by neighborhood?"
+  2. The Codex session date of October 18, 2026.
+  3. A brief project overview and description of the AmesHousing dataset.
+  4. A one-paragraph summary of the verified findings, including the overall
+  Pearson correlation of 0.707, differences among the five largest
+  neighborhoods, and the highest and lowest average sale prices.
+  5. A brief explanation of the methods used, including data cleaning,
+  neighborhood summary statistics, scatterplots, and Pearson correlation.
+  6. A description of the repository folders and analytical files.
+  7. A short explanation of the limitations of the analysis.
+  Please keep the README professional, clear, and concise. Use only verified
+  results from the Jupyter Notebook.
+  Do not modify any analytical files, the original CSV, the prompt history, the
+  AI Workflow Log, or the reflection.
+  After updating the README, explain exactly what you changed so I can review
+  it before accepting the final version.
+• I’ll read the existing README and inspect the repository’s current folders and
+  analysis files, then update only README.md with the verified notebook
+  findings. I’ll leave the CSV, notebook, charts, prompt history, AI Workflow
+  Log, and reflection untouched.
+• Explored
+  └ Read README.md
+    List rg --files -g '!*.csv' -g '!*.ipynb'
+    List rg --files --hidden -g '!/.git/**' -g '!**/.git/**'
+• Deleted README.md (+0 -2)
+    1 -# Codex CLI Hands-On
+    2 -
+• Added README.md (+34 -0)
+     1 +# Week 7 Codex CLI Assignment: Ames Housing Analysis
+     2 +
+     3 +**Codex session date:** October 18, 2026
+     4 +
+     5 +## Analytical question
+     6 +
+     7 +How does above-ground living area affect home sale prices in Ames, Iowa,
+         and does the relationship differ by neighborhood?
+     8 +
+     9 +## Project overview
+    10 +
+    11 +This project uses the AmesHousing dataset to examine the relationship be
+        tween above-ground living area (`Gr Liv Area`) and sale price (`SalePric
+        e`), including how that relationship varies by neighborhood. The provide
+        d CSV contains 2,930 home sales and 82 columns. The analysis is document
+        ed in a Jupyter Notebook and uses Python with pandas, NumPy, matplotlib,
+         and seaborn.
+    12 +
+    13 +## Verified findings
+    14 +
+    15 +Across all 2,930 homes, living area has a positive linear association wi
+        th sale price (Pearson *r* = **0.707**). The association is positive in
+        each of the five largest neighborhoods, but varies in strength: CollgCr
+        has the strongest correlation (*r* = **0.800**), followed by Somerst (**
+        0.683**), OldTown (**0.677**), NAmes (**0.659**), and Edwards (**0.528**
+        ). In the neighborhood summary, NoRidge has the highest average sale pri
+        ce (**$330,319.13**; 71 homes) and MeadowV the lowest (**$95,756.49**; 3
+        7 homes). These results describe associations in the dataset; they do no
+        t establish that larger living area causes higher prices.
+    16 +
+    17 +## Methods
+    18 +
+    19 +The notebook loads the CSV, selects living area, sale price, and neighbo
+        rhood, validates numeric fields, and checks missing, duplicate, and nonp
+        ositive values. All 2,930 observations were retained; no outliers were r
+        emoved. It calculates house counts, mean and median sale prices, and mea
+        n living area by neighborhood. Scatterplots with linear trend lines show
+         all homes and separate panels for the five largest neighborhoods. Pears
+        on correlations quantify the overall linear association and the associat
+        ion within each of those five neighborhoods.
+    20 +
+    21 +## Repository contents
+    22 +
+    23 +- `AmesHousing-1.csv` — original dataset.
+    24 +- `analysis/ames_housing_analysis.ipynb` — data loading, cleaning, neigh
+        borhood summary, visualizations, correlations, and findings.
+    25 +- `analysis/neighborhood_summary.csv` — neighborhood-level summary stati
+        stics.
+    26 +- `analysis/living_area_sale_price_all_homes.png` — scatterplot and over
+        all trend line.
+    27 +- `analysis/living_area_sale_price_top_neighborhoods.png` — neighborhood
+         comparison panels.
+    28 +- `prompts/codex-transcript.md` — assignment prompt history.
+    29 +- `log/ai-workflow-log.md` — AI workflow log.
+    30 +- `reflection.md` — assignment reflection.
+    31 +
+    32 +## Limitations
+    33 +
+    34 +Pearson correlation measures linear association and does not account for
+         other factors such as home quality, age, or lot size. Extreme observati
+        ons may influence the fitted trend lines; they were retained, and their
+        influence was not separately quantified. Neighborhood sample sizes diffe
+        r, so estimates for smaller groups may be less stable. Neighborhood-spec
+        ific correlations are reported for the five largest neighborhoods only.
+• Ran git diff --check -- README.md; git status --short; git diff -- README.md
+  └  M README.md
+    diff --git a/README.md b/README.md
+    index 55cd754..8b52298 100644
+    +38 lines (ctrl+t to view transcript)
+• Updated README.md with:
+  - The Week 7 assignment title, session date, and analytical question.
+  - A brief overview of the dataset and project.
+  - The verified correlations and neighborhood sale price averages.
+  - The cleaning and analysis methods.
+  - A list of the repository’s dataset, notebook, summary, charts, prompts,
+    workflow log, and reflection.
+  - Limitations covering correlation, extreme values, and neighborhood sample
+    sizes.
+  git diff --check passed. Only README.md was modified; the analytical files,
+  original CSV, prompt history, workflow log, and reflection were left
+  unchanged.
+  11:22 PM

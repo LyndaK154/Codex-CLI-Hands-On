@@ -2,6 +2,9 @@ AI Workflow Log
 
 Prompt 1: Dataset Exploration
 
+Date: October 18, 2026
+Time: 10:11 PM
+
 Objective:
 Understand the structure of the AmesHousing dataset and identify the variables needed to answer my analytical question.
 
@@ -28,6 +31,9 @@ Check the Python environment and determine whether the required libraries are av
 
 Prompt 2: Checking the Python Environment
 
+Date: October 18, 2026
+Time: 10:33 PM
+
 Objective:
 Determine why pandas was unavailable during the initial dataset inspection and identify the correct Python environment for my Jupyter Notebook analysis.
 
@@ -53,6 +59,9 @@ Next Step:
 Direct Codex to create a Jupyter Notebook that loads and cleans the AmesHousing dataset using the Anaconda environment.
 
 Prompt 3: Data Loading and Cleaning
+
+Date: October 18, 2026
+Time: 10:44 PM
 
 Objective:
 Create a Jupyter Notebook to load, inspect, and clean the AmesHousing dataset before performing the analysis.
@@ -83,6 +92,9 @@ Create a neighborhood-level summary table and examine how living area and sale p
 
 Prompt 4: Neighborhood Summary Analysis
 
+Date: October 18, 2026
+Time: 10:51 PM
+
 Objective:
 Compare average sale prices and above-ground living areas across neighborhoods in the AmesHousing dataset.
 
@@ -111,6 +123,9 @@ Next Step:
 Create visualizations to examine the relationship between above-ground living area and sale price, including differences across neighborhoods.
 
 Prompt 5: Visualizations and Correlation Analysis
+
+Date: October 18, 2026
+Time: 11:03 PM
 
 Objective:
 Visualize the relationship between above-ground living area and sale price and compare the relationship across neighborhoods.
@@ -141,6 +156,9 @@ Verify the calculations, review the visualizations, and prepare the final findin
 
 Prompt 6: Verification of Analytical Results
 
+Date: October 18, 2026
+Time: 11:12 PM
+
 Objective:
 Verify the accuracy of the calculations, summary table, visualizations, and interpretations before finalizing the analysis.
 
@@ -167,3 +185,35 @@ The verification process demonstrated that Codex could independently check its p
 
 Next Step:
 Update the README with the verified findings and complete the final reflection.
+
+Prompt 7: Updating the README
+
+Date: October 18, 2026
+Time: 11:22 PM
+
+Objective:
+Update the README to document the analytical question, methods, verified findings, and limitations.
+
+What I Asked Codex:
+I asked Codex to update my existing README using only verified results from the Jupyter Notebook. I requested the analytical question, session date, project overview, findings, methods, repository contents, and limitations. I instructed Codex not to modify any other files.
+
+What Codex Produced:
+Codex updated README.md with the analytical question and project overview. It included the overall Pearson correlation of 0.707, the correlations for the five largest neighborhoods, and the highest and lowest neighborhood average sale prices. It also documented the methods, repository files, and limitations.
+
+What I Accepted:
+I accepted the README structure and the use of verified results from the analysis.
+
+What I Modified:
+No additional modifications were requested. Codex replaced the original short README with a more detailed version.
+
+What I Rejected:
+I did not reject any of the README content because it met the assignment requirements and used verified findings.
+
+My Reasoning:
+I wanted the README to clearly explain the purpose of the analysis and summarize the results without requiring someone to open the Jupyter Notebook. I also wanted the limitations included so the findings would not be overstated.
+
+Challenges and Observations:
+Codex followed my instructions to modify only the README and confirmed that no other files were changed. This demonstrated the importance of specifying which files AI is allowed to edit.
+
+Next Step:
+Complete my one-page reflection, review all required files, and submit the GitHub repository URL.
