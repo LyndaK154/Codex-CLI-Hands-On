@@ -109,3 +109,32 @@ Codex resolved the earlier notebook cell ID warning. I also recognized that diff
 
 Next Step:
 Create visualizations to examine the relationship between above-ground living area and sale price, including differences across neighborhoods.
+
+Prompt 5: Visualizations and Correlation Analysis
+
+Objective:
+Visualize the relationship between above-ground living area and sale price and compare the relationship across neighborhoods.
+
+What I Asked Codex:
+I asked Codex to create an overall scatterplot with a trend line and a second visualization comparing the five neighborhoods with the most homes. I also requested Pearson correlations, explanations of the results, and an examination of potential outlier effects.
+
+What Codex Produced:
+Codex created two PNG visualizations and added them to the Jupyter Notebook. It calculated an overall Pearson correlation of 0.707, indicating a positive relationship between above-ground living area and sale price. The correlations were positive in all five selected neighborhoods, ranging from 0.528 in Edwards to 0.800 in CollgCr.
+
+What I Accepted:
+I accepted the use of scatterplots, shared axis scales for neighborhood comparisons, and Pearson correlation to measure the relationships.
+
+What I Modified:
+Codex revised the plotting code after encountering seaborn deprecation warnings and updated the interpretation to reflect the calculated correlations.
+
+What I Rejected:
+I did not reject any analytical results. I continued to retain all observations rather than removing potential outliers without further investigation.
+
+My Reasoning:
+Scatterplots help visualize the relationship between living area and sale price, while correlation coefficients provide a numerical measure of its strength. Comparing neighborhoods allows me to determine whether the relationship is consistent across different areas. Using shared axis scales also makes the neighborhood charts easier to compare.
+
+Challenges and Observations:
+Codex encountered warnings related to seaborn plotting arguments and adjusted the code. I learned that even when code executes successfully, reviewing warnings and visualizations is important for ensuring that the results are reliable.
+
+Next Step:
+Verify the calculations, review the visualizations, and prepare the final findings for the README.
