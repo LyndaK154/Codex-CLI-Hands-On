@@ -138,3 +138,32 @@ Codex encountered warnings related to seaborn plotting arguments and adjusted th
 
 Next Step:
 Verify the calculations, review the visualizations, and prepare the final findings for the README.
+
+Prompt 6: Verification of Analytical Results
+
+Objective:
+Verify the accuracy of the calculations, summary table, visualizations, and interpretations before finalizing the analysis.
+
+What I Asked Codex:
+I asked Codex to independently recalculate the overall and neighborhood correlations, verify the neighborhood summary statistics, confirm that all observations were retained, inspect the charts, and identify limitations. I also requested a final findings section for the notebook and a summary for my README.
+
+What Codex Produced:
+Codex independently verified the overall Pearson correlation of 0.70678, which rounds to 0.707. It confirmed the five neighborhood correlations and verified that all 28 neighborhood summary rows matched the original dataset. Codex also inspected both charts and confirmed that all 2,930 observations were retained. It added a final findings section to the Jupyter Notebook and executed it successfully.
+
+What I Accepted:
+I accepted the verified calculations, summary statistics, visualizations, and final findings because Codex reported that its independent checks matched the original results.
+
+What I Modified:
+Codex added a final findings and limitations section to the notebook. No changes to the original dataset or previously reported calculations were needed.
+
+What I Rejected:
+I did not reject any results because the independent verification did not identify calculation errors or inconsistencies.
+
+My Reasoning:
+I wanted to confirm that the analysis was accurate rather than relying only on the original AI-generated results. The independent calculations helped establish confidence in the reported findings. I also wanted to ensure that the interpretation acknowledged limitations, including potential outlier effects and the fact that correlation does not establish causation.
+
+Challenges and Observations:
+The verification process demonstrated that Codex could independently check its previous work. I also learned that accurate calculations do not automatically establish causal relationships, since other housing characteristics may influence sale prices.
+
+Next Step:
+Update the README with the verified findings and complete the final reflection.
