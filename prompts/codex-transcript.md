@@ -74,3 +74,91 @@ I am completing an individual analytics assignment using the AmesHousing-
   I’ve left the dataset and workspace unchanged.
 
   10:11 PM
+
+Prompt 2
+I reviewed your initial dataset inspection and accept the findings.
+  I noticed that your first attempt failed because pandas was not installed.
+  Since I plan to use Python in Jupyter Notebook for my analysis, I want to
+  make sure my environment is set up correctly.
+  Please check the following:
+  1. Which Python interpreter is currently being used.
+  2. Whether Jupyter Notebook is installed.
+  3. Whether pandas, numpy, matplotlib, and seaborn are installed.
+  4. Whether I have an existing Conda or virtual environment that would work
+  for this project.
+  Please explain your findings and recommend the next steps. Do not install
+  anything or modify any files until I approve.
+• I’ll check the active Python executable and package availability, then look
+  for existing Conda or virtual environments. I’ll only inspect the environment;
+  I won’t install packages or change files.
+• Ran python3 -c 'import sys, importlib.util;
+  │ print("executable:",sys.executable);
+  │ print("version:",sys.version.replace("\n"," "));
+  │ … +5 lines
+  └ executable: /Library/Developer/CommandLineTools/usr/bin/python3
+    version: 3.9.6 (default, Apr 30 2025, 02:07:18)  [Clang 17.0.0
+    (clang-1700.0.13.5)]
+    +10 lines (ctrl+t to view transcript)
+• Ran command -v python3; command -v python; command -v jupyter; command -v
+  │ conda; command -v mamba; command -v micromamba; ls -la
+  └ /usr/bin/python3
+    /Applications/anaconda3/bin/python
+    /Applications/anaconda3/bin/jupyter
+    +12 lines (ctrl+t to view transcript)
+• Ran conda env list
+  └ sysctl: sysctl fmt -1 1024 1: Operation not permitted
+    sysctl: sysctl fmt -1 1024 1: Operation not permitted
+    sysctl: sysctl fmt -1 1024 1: Operation not permitted
+    +8 lines (ctrl+t to view transcript)
+• Ran jupyter kernelspec list
+  └ /Applications/anaconda3/lib/python3.11/site-packages/IPython/paths.py:62:
+    UserWarning: IPython dir '/Users/lyndaknox/.ipython' is not a writable
+    location, using a temp directory.
+    +7 lines (ctrl+t to view transcript)
+• Ran conda list -n base --json
+  └ [
+      {
+        "base_url": "https://repo.anaconda.com/pkgs/main",
+    +5219 lines (ctrl+t to view transcript)
+• Ran conda list -n base notebook jupyter pandas numpy matplotlib seaborn
+  └ usage: conda [-h] [-v] [--no-plugins] [-V] COMMAND ...
+    conda: error: unrecognized arguments: jupyter pandas numpy matplotlib
+    seaborn
+• Ran /Applications/anaconda3/bin/python -c 'import sys,importlib.util;
+  │ print("executable:",sys.executable);
+  │ print("version:",sys.version.replace("\n"," "));
+  │ … +9 lines
+  └ WARNING: Logging before InitGoogleLogging() is written to STDERR
+    W20261018 22:32:56.397291 1443418496 cpu_info.cc:239] IOError: sysctlbyname
+    failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+    +36 lines (ctrl+t to view transcript)
+• Ran conda list -n base | rg '^(notebook|jupyter|pandas|numpy|matplotlib|
+  │ seaborn|ipykernel|jupyterlab)\s'
+  └ ipykernel                 6.28.0          py311hecd8cb5_0
+    jupyter                   1.0.0           py311hecd8cb5_9
+    jupyterlab                4.0.11          py311hecd8cb5_0
+    +5 lines (ctrl+t to view transcript)
+• ## Findings
+  - Python used by the shell command python3: /Library/Developer/
+    CommandLineTools/usr/bin/python3, version 3.9.6. It is the system Python,
+    and it does not have Jupyter Notebook, pandas, NumPy, matplotlib, or seaborn
+    installed.
+  - Anaconda is also installed: /Applications/anaconda3/bin/python is Python
+    3.11. The Anaconda base environment has Jupyter Notebook, pandas 2.3.1,
+    NumPy 1.26.4, matplotlib 3.10.0, seaborn 0.12.2, and ipykernel installed. A
+    Jupyter python3 kernel is registered there.
+  - Environments found: Conda lists a base environment and an existing scct-
+    project environment. The base environment is a suitable starting point for
+    this assignment. I did not inspect the package contents of scct-project, so
+    I can’t confirm whether it also has the required packages.
+  - Standalone virtual environment: The active system Python is not running
+    inside a venv. I didn’t find a project-local virtual environment in the
+    workspace.
+  ## Recommended next steps
+  Use the Anaconda base environment’s Python and Jupyter, rather than the
+  python3 command that currently resolves to the system Python. In Jupyter,
+  select the registered Python 3 kernel and confirm its interpreter is /
+  Applications/anaconda3/bin/python. That environment already has the packages
+  needed for the analysis.
+  No packages were installed and no files were modified.
+  10:33 PM
