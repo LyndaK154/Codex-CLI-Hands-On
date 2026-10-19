@@ -80,3 +80,32 @@ Codex successfully used the Anaconda environment identified in Prompt 2. A Missi
 
 Next Step:
 Create a neighborhood-level summary table and examine how living area and sale price vary across neighborhoods.
+
+Prompt 4: Neighborhood Summary Analysis
+
+Objective:
+Compare average sale prices and above-ground living areas across neighborhoods in the AmesHousing dataset.
+
+What I Asked Codex:
+I asked Codex to group the data by neighborhood and calculate the number of houses, average sale price, median sale price, and average above-ground living area. I also requested that it save the results as a CSV file and investigate the earlier notebook cell ID warning.
+
+What Codex Produced:
+Codex added a neighborhood summary section to the Jupyter Notebook and created "analysis/neighborhood_summary.csv". It reported that NoRidge had the highest average sale price at $330,319.13 across 71 homes, while MeadowV had the lowest at $95,756.49 across 37 homes. Codex also corrected the notebook cell IDs and successfully executed the notebook using Anaconda.
+
+What I Accepted:
+I accepted the neighborhood summary table, the decision to retain all observations, and the correction to the notebook metadata.
+
+What I Modified:
+I did not request any changes to the summary calculations. Codex updated the notebook metadata to address the previous warning.
+
+What I Rejected:
+I did not reject any of the reported results.
+
+My Reasoning:
+The summary table helps compare housing prices across neighborhoods while also showing how many homes are represented in each group. Including the number of houses is important because averages based on small samples may be less reliable.
+
+Challenges and Observations:
+Codex resolved the earlier notebook cell ID warning. I also recognized that differences in average sale price do not necessarily mean neighborhood alone causes those differences.
+
+Next Step:
+Create visualizations to examine the relationship between above-ground living area and sale price, including differences across neighborhoods.
